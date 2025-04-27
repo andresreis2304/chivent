@@ -1,8 +1,23 @@
-function Home() {
+import Navbar from '../components/Navbar';
+import EventCard from '../components/EventCard';
+import { useEffect, useState } from 'react';
+
+function Home({ events }) {
     return (
-      <div>
-        <h1>🎫 Upcoming Events</h1>
-        <p>This is the catalog view</p>
+      <div style={{ width: '100vw', boxSizing: 'border-box', margin: 0 }}>
+        <Navbar />
+        <div style={{
+          width: '100%',
+          padding: '2rem',
+          boxSizing: 'border-box',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '1rem'
+        }}>
+          {events.map((event) => (
+            <EventCard key={event.id} event={event} />
+          ))}
+        </div>
       </div>
     );
   }
