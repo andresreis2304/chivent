@@ -19,7 +19,7 @@ function EventPage({events, cart, setCart }) {
     }
 
     /* fallback: ask backend for just this event */
-    fetch(`http://127.0.0.1:5000/events/${id}`)
+    fetch(`http://3.133.100.165:5000/event/${id}`)
       .then(r => {
         if (!r.ok) throw new Error('404');
         return r.json();
