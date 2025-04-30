@@ -8,10 +8,10 @@ function App() {
   const [events, setEvents] = useState([]);
   const [cart,   setCart]   = useState([]);
 
-  const API_BASE = import.meta.env.VITE_API_BASE ?? '';   // "" in dev .env
+  //const API_BASE = import.meta.env.VITE_API_BASE ?? '';   // "" in dev .env
 
   useEffect(() => {
-    fetch('${import.meta.env.VITE_API_BASE}/events/all')            
+    fetch(`${import.meta.env.VITE_API_BASE}/events/all`)            
       .then(res  => res.json())
       .then(data => setEvents(data))
       .catch(err => console.error('Error fetching events:', err));
