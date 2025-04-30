@@ -8,5 +8,3 @@ Inside the frontend, components such as the cart utilize state management using 
 The Backend is created using Flask and Gunicorn and as mentioned before runs on an EC2 instance. It consists of routes such as /events/all that returns event data in JSON. The backend has the database connected on MySQL, which runs on the same EC2 instance. The backend also contains functionality to fetch event database via Ticketmaster and is capable of dealing with duplicates. 
  
 The architecture allows easy workflow, React deals with the User Interface, Flask deals with logic and database communication, and MySQL deals with storing events and in the future things like a user information. 
-     
-![image](https://github.com/user-attachments/assets/2c640047-b616-4413-a5fe-00cad04b9d1f)
