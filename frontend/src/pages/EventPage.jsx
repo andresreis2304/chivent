@@ -19,7 +19,7 @@ function EventPage({events, cart, setCart }) {
     }
 
     /* fallback: ask backend for just this event */
-    fetch(`https://988d-3-133-100-165.ngrok-free.app/event/${id}`)
+    fetch(`${import.meta.env.VITE_API_BASE}/event/${id}`)
       .then(r => {
         if (!r.ok) throw new Error('404');
         return r.json();

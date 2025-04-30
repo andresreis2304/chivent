@@ -11,7 +11,7 @@ function App() {
   const API_BASE = import.meta.env.VITE_API_BASE ?? '';   // "" in dev .env
 
   useEffect(() => {
-    fetch('https://988d-3-133-100-165.ngrok-free.app/events/all')            
+    fetch('${import.meta.env.VITE_API_BASE}/events/all')            
       .then(res  => res.json())
       .then(data => setEvents(data))
       .catch(err => console.error('Error fetching events:', err));
