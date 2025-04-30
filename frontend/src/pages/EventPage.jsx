@@ -19,7 +19,7 @@ function EventPage({events, cart, setCart }) {
     }
 
     /* fallback: ask backend for just this event */
-    fetch(`http://3.133.100.165:5000/event/${id}`)
+    fetch(`https://988d-3-133-100-165.ngrok-free.app/event/${id}`)
       .then(r => {
         if (!r.ok) throw new Error('404');
         return r.json();
