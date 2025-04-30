@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
-import Home        from './pages/Home.jsx';
-import EventPage   from './pages/EventPage.jsx';
-import Cart        from './pages/Cart.jsx';
+import Home from './pages/Home.jsx';
+import EventPage from './pages/EventPage.jsx';
+import Cart from './pages/Cart.jsx';
 import { useEffect, useState } from 'react';
 
 function App() {
